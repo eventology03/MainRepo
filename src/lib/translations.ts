@@ -1,7 +1,7 @@
 export const translations = {
   en: {
     nav: {
-      links: ["Who We Are", "Services", "Work", "Contact", "Tickets"],
+      links: ["Who We Are", "Services", "Contact", "Tickets"],
       cta: "Book Your Free Consultation",
     },
     hero: {
@@ -147,7 +147,7 @@ export const translations = {
   },
   ar: {
     nav: {
-      links: ["من نحن", "الخدمات", "اعمالنا", "تواصل معنا", "التذاكر"],
+      links: ["من نحن", "الخدمات", "تواصل معنا", "التذاكر"],
       cta: "احصل على استشارة مجانية",
     },
     hero: {
