@@ -1,5 +1,5 @@
 import { createFileRoute, useRouterState, Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "@/lib/language-context";
 import { homeCopy } from "@/lib/home-copy";
 import { LanguageGate } from "@/components/site/LanguageGate";
@@ -29,7 +29,12 @@ function Index() {
   // Cross-route Link navigations (e.g. from /tickets to /#services) land here
   // before the target section has mounted, so the router's own hash-scroll
   // fires too early and silently no-ops. Retry once the sections are in the DOM.
+  // Arrival only: a same-page hash change must keep the browser's smooth scroll
+  // (styles.css `scroll-behavior: smooth`), which an instant jump would cancel.
+  const arrived = useRef(false);
   useEffect(() => {
+    if (arrived.current) return;
+    arrived.current = true;
     if (!hash) return;
     const id = window.setTimeout(() => {
       document.getElementById(hash)?.scrollIntoView({ behavior: "instant" });
