@@ -13,7 +13,24 @@ export function HeroStage() {
   const { lang } = useLanguage();
   const c = homeCopy[lang];
   const stage = useRef<HTMLElement>(null);
+  const core = useRef<HTMLDivElement>(null);
+  const markBox = useRef<HTMLDivElement>(null);
   const [p, setP] = useState(0);
+  // The wordmark and CTAs are invisible at rest but still occupy layout space,
+  // which pushes the mark above centre. Offset the core by half that space and
+  // ease it out as they fade in.
+  const [lift, setLift] = useState(0);
+
+  useEffect(() => {
+    const measure = () => {
+      if (!core.current || !markBox.current) return;
+      setLift((core.current.offsetHeight - markBox.current.offsetHeight) / 2);
+    };
+    measure();
+    document.fonts?.ready.then(measure); // wordmark height changes once Fraunces loads
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, [lang]);
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -67,13 +84,15 @@ export function HeroStage() {
         />
 
         <div
+          ref={core}
           className="relative z-[3] grid justify-items-center"
           style={{
             opacity: 1 - b,
-            transform: `translateY(${-60 * b}px) scale(${1 - 0.06 * b})`,
+            transform: `translateY(${lift * (1 - a) - 60 * b}px) scale(${1 - 0.06 * b})`,
           }}
         >
           <div
+            ref={markBox}
             className="relative w-[min(26vw,320px)]"
             style={{ aspectRatio: "686 / 835", transform: `translateY(${-34 * a}px)` }}
           >

@@ -42,8 +42,11 @@ function Index() {
     return () => window.clearTimeout(id);
   }, [hash]);
 
+  // overflow-x-clip, not -hidden: `hidden` makes this a scroll container
+  // (overflow-y computes to auto), which silently breaks the hero's
+  // position: sticky. `clip` contains overflow without that side effect.
   return (
-    <div dir={dir} className="overflow-x-hidden bg-background text-foreground">
+    <div dir={dir} className="overflow-x-clip bg-background text-foreground">
       <LanguageGate reopenSignal={gateSignal} />
       <DrawerNav onOpenPreferences={() => setGateSignal((n) => n + 1)} />
 
