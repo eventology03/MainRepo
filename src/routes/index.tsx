@@ -176,7 +176,12 @@ function Index() {
               >
                 {c.whatsapp}
               </a>
-              <a href="#" className="py-1 text-sm hover:text-accent">
+              <a
+                href="https://www.instagram.com/eventoloogy/"
+                className="py-1 text-sm hover:text-accent"
+                target="_blank"
+                rel="noreferrer"
+              >
                 {c.instagram}
               </a>
             </div>

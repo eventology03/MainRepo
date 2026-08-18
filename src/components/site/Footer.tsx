@@ -48,7 +48,12 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-accent transition-colors">
+                <a
+                  href="https://www.instagram.com/eventoloogy/"
+                  className="hover:text-accent transition-colors"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Instagram
                 </a>
               </li>
