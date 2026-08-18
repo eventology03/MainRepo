@@ -38,7 +38,7 @@
   --foreground: oklch(0.955 0.008 85);
   --muted: oklch(0.28 0.008 60);
   --muted-foreground: oklch(0.68 0.012 75);
-  --accent: oklch(0.74 0.12 78);
+  --accent: oklch(0.7 0.11 200);
   --accent-foreground: oklch(0.145 0.005 60);
   --border: oklch(1 0 0 / 8%);
   --hairline: oklch(1 0 0 / 12%);
@@ -140,4 +140,12 @@
   .hero-sheen {
     animation: none;
   }
+}
+
+/* Arabic is a connected script: letter-spacing severs the letter joins and
+   uppercase means nothing. Keep the eyebrow treatment for Latin text only. */
+[dir="rtl"] .eyebrow,
+:lang(ar) .eyebrow {
+  letter-spacing: 0;
+  text-transform: none;
 }

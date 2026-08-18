@@ -130,13 +130,13 @@ export function HeroStage() {
           >
             <a
               href="#contact"
-              className="eyebrow rounded-sm border border-hairline px-5 py-3 text-foreground transition-colors hover:border-accent hover:text-accent"
+              className="eyebrow rounded-sm border border-accent bg-accent px-5 py-3 !text-accent-foreground transition-opacity hover:opacity-80"
             >
               {c.ctaBook}
             </a>
             <a
               href="#services"
-              className="eyebrow rounded-sm border border-hairline px-5 py-3 transition-colors hover:border-accent hover:text-accent"
+              className="eyebrow rounded-sm border border-hairline px-5 py-3 !text-foreground transition-colors hover:border-accent hover:!text-accent"
             >
               {c.ctaServices}
             </a>

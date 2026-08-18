@@ -98,7 +98,7 @@ function GateChoice({
         className="absolute -inset-px z-0 opacity-60 transition-opacity duration-500 group-hover:opacity-90"
         style={{
           background:
-            "radial-gradient(130% 100% at 18% 26%, oklch(0.74 0.12 78 / 0.32), transparent 62%), radial-gradient(130% 100% at 84% 76%, oklch(0.5 0.15 30 / 0.26), transparent 62%), repeating-linear-gradient(114deg, oklch(1 0 0 / 0.05) 0 1.5px, transparent 1.5px 9px), linear-gradient(158deg, var(--surface-2) 0%, var(--background) 100%)",
+            "radial-gradient(130% 100% at 18% 26%, oklch(0.5 0.15 30 / 0.32), transparent 62%), radial-gradient(130% 100% at 84% 76%, oklch(0.7 0.11 200 / 0.30), transparent 62%), repeating-linear-gradient(114deg, oklch(1 0 0 / 0.05) 0 1.5px, transparent 1.5px 9px), linear-gradient(158deg, var(--surface-2) 0%, var(--background) 100%)",
         }}
       />
       <span
