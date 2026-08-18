@@ -85,7 +85,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Eventology is a discipline-first event operations studio. We plan, design, and execute events as a unified operation — every detail, our responsibility.",
       },
       { name: "author", content: "Eventology" },
-      { property: "og:title", content: "Eventology — Structure. Clarity. Execution." },
+      { property: "og:title", content: "Eventology" },
       {
         property: "og:description",
         content: "A discipline-first event operations studio. Every detail, our responsibility.",

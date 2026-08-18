@@ -12,7 +12,6 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-10 mb-16">
           <div className="md:col-span-2">
             <h3 className="display text-3xl md:text-4xl mb-4">Eventology</h3>
-            <p className="text-muted-foreground max-w-sm">{t.footer.tagline}</p>
           </div>
           <div>
             <p className="eyebrow mb-4">{t.footer.navigate}</p>

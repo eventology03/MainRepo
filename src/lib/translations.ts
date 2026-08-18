@@ -105,7 +105,6 @@ export const translations = {
       emailBody: "Send a brief, deck, or a paragraph — we'll write back with next steps.",
     },
     footer: {
-      tagline: "Structure. Clarity. Execution.",
       navigate: "Navigate",
       contact: "Contact",
       rights: "All rights reserved.",
@@ -251,7 +250,6 @@ export const translations = {
       emailBody: "ارسل موجز لفكرتك وسنرد عليك بالخطوات القادمة.",
     },
     footer: {
-      tagline: "تنظيم. وضوح. اتقان التنفيذ.",
       navigate: "روابط",
       contact: "تواصل",
       rights: "جميع الحقوق محفوظة.",
